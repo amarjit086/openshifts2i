@@ -1,4 +1,4 @@
-FROM  ubi:8.0
+FROM  registry.redhat.io/ubi8/ubi
 RUN   yum install httpd python36 -y
 RUN  sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf
 COPY  src/  /var/www/html/
